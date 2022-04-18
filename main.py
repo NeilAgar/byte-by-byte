@@ -1,6 +1,9 @@
-from flask import Flask, jsonify, render_template
+from dotenv import load_dotenv
+from flask import Flask, render_template
 from flask_jwt_extended import JWTManager
 from flask_restful import Api
+
+load_dotenv(".env", verbose=True)
 
 from resources.home import HomePage
 
@@ -10,7 +13,7 @@ api = Api(app)
 
 jwt = JWTManager(app)
 
-app.config.from_object("config")
+app.config.from_object("default_config")
 
 
 @app.errorhandler(404)
@@ -36,4 +39,4 @@ def unknown_error(e):
 api.add_resource(HomePage, "/")
 
 if __name__ == "__main__":
-    app.run(debug=False)
+    app.run(debug=True)
