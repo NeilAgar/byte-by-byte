@@ -7,11 +7,11 @@ Flask-RESTful
 gunicorn
 importlib-metadata
 itsdangerous
-Jinja2
+Jinja2==3.0.3
 MarkupSafe
 PyJWT
 python-dotenv
 pytz
 six
-Werkzeug
+Werkzeug==2.0.0
 zipp
