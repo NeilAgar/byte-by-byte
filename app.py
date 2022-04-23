@@ -4,15 +4,18 @@ from flask_restful import Api
 
 load_dotenv(".env", verbose=True)
 
+from extensions import mail
 from resources.home import HomePage
 from resources.links import ImportantLinks, ImportantLinksRedirect
 from resources.announcements import Announcements, AnnouncementsRedirect
 
 
 app = Flask(__name__)
-api = Api(app)
 
 app.config.from_object("default_config")
+
+api = Api(app)
+mail.init_app(app)
 
 
 @app.errorhandler(404)

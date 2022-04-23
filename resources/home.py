@@ -1,5 +1,8 @@
 from flask_restful import Resource
 from flask import make_response, render_template, request, url_for, redirect
+from flask_mail import Message
+
+from extensions import mail
 
 
 class HomePage(Resource):
@@ -13,5 +16,16 @@ class HomePage(Resource):
         name = request.form.get('name')
         email = request.form.get('email')
         message = request.form.get('message')
-        # return {"name": name, "email": email, "message": message}
+
+        msg = Message("Byte By Byte Website Question", recipients=["neiliscool67@gmail.com", "aditagarwal76@gmail.com", "bytebybyte.npo@gmail.com", "aditneil@outlook.com"])
+
+        msg.body = f"""
+Name: {name}
+Email: {email}
+
+{message}
+"""
+
+        mail.send(msg)
+
         return redirect(url_for("homepage"))

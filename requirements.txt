@@ -4,6 +4,7 @@ Flask
 Flask-JWT
 Flask-JWT-Extended
 Flask-RESTful
+Flask-Mail
 gunicorn
 importlib-metadata
 itsdangerous
