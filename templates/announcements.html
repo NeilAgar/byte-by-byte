@@ -10,31 +10,72 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
     <title>Byte By Byte</title>
-    <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='assets/images/favicon.ico')}}">
+    <link rel="icon" type="image/x-icon" href="static/assets/images/favicon.ico">
 
     <!-- Bootstrap core CSS -->
-    <link href="{{url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 
     <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="{{url_for('static', filename='assets/css/fontawesome.css')}}">
-    <link rel="stylesheet" href="{{url_for('static', filename='assets/css/templatemo-eduwell-style.css')}}">
-    <link rel="stylesheet" href="{{url_for('static', filename='assets/css/owl.css')}}">
-    <link rel="stylesheet" href="{{url_for('static', filename='assets/css/lightbox.css')}}">
+    <link rel="stylesheet" href="static/assets/css/fontawesome.css">
+    <link rel="stylesheet" href="static/assets/css/templatemo-eduwell-style.css">
+    <link rel="stylesheet" href="static/assets/css/owl.css">
+    <link rel="stylesheet" href="static/assets/css/lightbox.css">
   </head>
 
-<body>
+  <style>
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0 4px;
+    }
+
+    /* Create four equal columns that sits next to each other */
+    .column {
+      flex: 25%;
+      max-width: 25%;
+      padding: 0 4px;
+    }
+
+    .column img {
+      margin-top: 8px;
+      vertical-align: middle;
+      width: 100%;
+    }
+
+    /* Responsive layout - makes a two column-layout instead of four columns */
+    @media screen and (max-width: 800px) {
+      .column {
+        flex: 50%;
+        max-width: 50%;
+      }
+    }
+
+    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+      .column {
+        flex: 100%;
+        max-width: 100%;
+      }
+    }
+
+    .round {
+      border-radius: 50%;
+    }
+  </style>
+
+  <body>
 
 
   <!-- ***** Header Area Start ***** -->
-  <header class="header-area header-sticky">
+    <header class="header-area header-sticky">
       <div class="container">
           <div class="row">
               <div class="col-12">
                   <nav class="main-nav">
                       <!-- ***** Logo Start ***** -->
                       <a href="/" class="logo">
-                          <img src="{{url_for('static', filename='assets/images/icon.png')}}" alt="ByteByByte Logo">
+                          <img src="static/assets/images/icon.png" alt="ByteByByte Logo">
                       </a>
                       <!-- ***** Logo End ***** -->
                       <!-- ***** Menu Start ***** -->
@@ -50,20 +91,27 @@
               </div>
           </div>
       </div>
-  </header>
+    </header>
   <!-- ***** Header Area End ***** -->
   <section class="main-banner" id="top">
     <div class="container">
       <div class="row">
-        <div class="col-lg-6 align-self-center">
-          <div class="header-text">
-            <h2><em>Something went wrong!</em></h2>
-            <h2>Error 500</h2>
-          </div>
+        <div class="header-text">
+          <h2 style="text-align: center;"><em>Announcements</em></h2>
         </div>
-        <div class="col-lg-6">
-          <div class="right-image">
-            <img src="{{url_for('static', filename='assets/images/error.png')}}" alt="">
+
+        <div class="announcement" style="margin-bottom: 15px">
+          <div class="section-heading" style="text-align: left; margin: 5px; margin-bottom: 10px">
+            <h4>Our first class</h4>
+          </div>
+
+          <div style="margin-left: 5px; margin-bottom: 10px">
+            <p>Hello!</p>
+            <p>Our first meeting will be held on May 8th from 1:00 - 4:00 PM at the Central Resource Johnson County Library in the Carmack room.</p>
+            <p>You can find the map below for directions.</p>
+            <br>
+            <p>If you know any friends or family who are interested in learning Java or about computer science, please invite them if you can.</p>
+            <p>Thank you!</p>
           </div>
         </div>
       </div>
@@ -72,16 +120,16 @@
 
   <!-- Scripts -->
   <!-- Bootstrap core JavaScript -->
-    <script src="{{url_for('static', filename='vendor/jquery/jquery.min.js')}}"></script>
-    <script src="{{url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="static/vendor/jquery/jquery.min.js"></script>
+    <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <script src="{{url_for('static', filename='assets/js/isotope.min.js')}}"></script>
-    <script src="{{url_for('static', filename='assets/js/owl-carousel.js')}}"></script>
-    <script src="{{url_for('static', filename='assets/js/lightbox.js')}}"></script>
-    <script src="{{url_for('static', filename='assets/js/tabs.js')}}"></script>
-    <script src="{{url_for('static', filename='assets/js/video.js')}}"></script>
-    <script src="{{url_for('static', filename='assets/js/slick-slider.js')}}"></script>
-    <script src="{{url_for('static', filename='assets/js/custom.js')}}"></script>
+    <script src="static/assets/js/isotope.min.js"></script>
+    <script src="static/assets/js/owl-carousel.js"></script>
+    <script src="static/assets/js/lightbox.js"></script>
+    <script src="static/assets/js/tabs.js"></script>
+    <script src="static/assets/js/video.js"></script>
+    <script src="static/assets/js/slick-slider.js"></script>
+    <script src="static/assets/js/custom.js"></script>
     <script>
         //according to loftblog tut
         $('.nav li:first').addClass('active');

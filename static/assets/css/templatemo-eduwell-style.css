@@ -1291,6 +1291,7 @@ about us page
 ---------------------------------------------
 */
 
+
 section.get-info .left-image {
   margin-right: 30px;
 }
@@ -1565,7 +1566,21 @@ section.our-office #video img {
   border-radius: 20px;
 }
 
+.announcement {
+  height: fit-content;
+  width: 80%;
+  background-color: #D3D3D3;
+  border-radius: 10px;
+  box-shadow: -5px 5px 5px 0px #A8A4A5;
+  margin: auto;
+  color: black;
+  vertical-align: middle;
+}
 
+.iframe-container {
+  justify-content: center;
+  display: flex;
+}
 
 /*
 ---------------------------------------------

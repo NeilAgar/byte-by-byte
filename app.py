@@ -1,17 +1,16 @@
 from dotenv import load_dotenv
 from flask import Flask, render_template
-from flask_jwt_extended import JWTManager
 from flask_restful import Api
 
 load_dotenv(".env", verbose=True)
 
 from resources.home import HomePage
+from resources.links import ImportantLinks, ImportantLinksRedirect
+from resources.announcements import Announcements, AnnouncementsRedirect
 
 
 app = Flask(__name__)
 api = Api(app)
-
-jwt = JWTManager(app)
 
 app.config.from_object("default_config")
 
@@ -21,22 +20,16 @@ def page_not_found(e):
     return render_template('404.html'), 404
 
 
-@app.errorhandler(403)
-def page_forbidden(e):
-    return render_template('403.html'), 403
-
-
-@app.errorhandler(401)
-def page_forbidden(e):
-    return render_template('401.html'), 401
-
-
 @app.errorhandler(500)
 def unknown_error(e):
     return render_template('500.html'), 500
 
 
 api.add_resource(HomePage, "/")
+api.add_resource(ImportantLinks, "/important_links")
+api.add_resource(ImportantLinksRedirect, "/important_links/")
+api.add_resource(Announcements, "/announcements")
+api.add_resource(AnnouncementsRedirect, "/announcements/")
 
 if __name__ == "__main__":
     app.run(debug=True)
