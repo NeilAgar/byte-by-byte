@@ -9,7 +9,7 @@ class HomePage(Resource):
     @classmethod
     def get(cls):
         headers = {"Content-Type": "text/html"}
-        return make_response(render_template("google0951b6987a7c28b7.html"), 200, headers,)
+        return make_response(render_template("home_page.html"), 200, headers,)
 
     @classmethod
     def post(cls):
