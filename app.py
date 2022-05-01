@@ -35,4 +35,4 @@ api.add_resource(Announcements, "/announcements")
 api.add_resource(AnnouncementsRedirect, "/announcements/")
 
 if __name__ == "__main__":
-    app.run(debug=False)
+    app.run(debug=False, port=5001)
