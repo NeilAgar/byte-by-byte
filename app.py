@@ -8,6 +8,7 @@ from extensions import mail
 from resources.home import HomePage
 from resources.links import ImportantLinks, ImportantLinksRedirect
 from resources.announcements import Announcements, AnnouncementsRedirect
+from resources.enroll import EnrollRedirect, AlternateEnrollRedirect
 
 
 app = Flask(__name__)
@@ -33,6 +34,8 @@ api.add_resource(ImportantLinks, "/important_links")
 api.add_resource(ImportantLinksRedirect, "/important_links/")
 api.add_resource(Announcements, "/announcements")
 api.add_resource(AnnouncementsRedirect, "/announcements/")
+api.add_resource(EnrollRedirect, "/enroll")
+api.add_resource(AlternateEnrollRedirect, "/enroll/")
 
 if __name__ == "__main__":
     app.run(debug=False, port=5001)
