@@ -9,6 +9,7 @@ from resources.home import HomePage
 from resources.links import ImportantLinks, ImportantLinksRedirect
 from resources.announcements import Announcements, AnnouncementsRedirect
 from resources.enroll import EnrollRedirect, AlternateEnrollRedirect
+from resources.certification import Certification
 
 
 app = Flask(__name__)
@@ -36,6 +37,7 @@ api.add_resource(Announcements, "/announcements")
 api.add_resource(AnnouncementsRedirect, "/announcements/")
 api.add_resource(EnrollRedirect, "/enroll")
 api.add_resource(AlternateEnrollRedirect, "/enroll/")
+api.add_resource(Certification, "/.well-known/acme-challenge/A-HCNfCk5OOKccjPWXQcRnd6wdfB1Bs6PViGqZ-JzNA")
 
 if __name__ == "__main__":
     app.run(debug=False, port=5001)
