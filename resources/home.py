@@ -30,4 +30,4 @@ class HomePage(Resource):
 
             mail.send(msg)
 
-            return redirect(url_for("homepage"))
+        return redirect(url_for("homepage"))
