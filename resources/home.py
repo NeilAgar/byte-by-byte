@@ -8,6 +8,7 @@ from extensions import mail
 class HomePage(Resource):
     @classmethod
     def get(cls):
+        print(request.headers)
         headers = {"Content-Type": "text/html"}
         return make_response(render_template("home_page.html"), 200, headers, )
 
