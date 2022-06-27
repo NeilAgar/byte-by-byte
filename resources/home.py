@@ -17,7 +17,7 @@ class HomePage(Resource):
         name = request.form.get('name')
         email = request.form.get('email')
         message = request.form.get('message')
-        if name not in ["HenryPhiBe"]:
+        if name not in ["HenryPhiBe", "CrytoPhiBePhiBe"]:
             msg = Message("Byte By Byte Website Question",
                           recipients=["neiliscool67@gmail.com", "aditagarwal76@gmail.com", "bytebybyte.npo@gmail.com",
                                       "aditneil@outlook.com"])
