@@ -11,7 +11,7 @@ itsdangerous
 Jinja2==3.1.2
 MarkupSafe==2.1.2
 PyJWT
-python-dotenv==1.0.0
+python-dotenv
 pytz==2023.2
 six==1.16.0
 Werkzeug==2.2.3
