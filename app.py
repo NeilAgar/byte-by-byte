@@ -38,4 +38,4 @@ api.add_resource(EnrollRedirect, "/enroll")
 api.add_resource(AlternateEnrollRedirect, "/enroll/")
 
 if __name__ == "__main__":
-    app.run(debug=False, port=5001)
+    app.run(debug=True, port=5001)
