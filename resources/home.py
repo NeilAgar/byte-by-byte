@@ -2,7 +2,7 @@ from flask_restful import Resource
 from flask import make_response, render_template, request, url_for, redirect
 from flask_mail import Message
 
-from extensions import mail
+from extensions import mail, is_spam
 
 
 class HomePage(Resource):
@@ -17,7 +17,7 @@ class HomePage(Resource):
         name = request.form.get('name')
         email = request.form.get('email')
         message = request.form.get('message')
-        if name not in ["HenryPhiBe", "CrytoPhiBePhiBe"]:
+        if not is_spam(name, email):
             msg = Message("Byte By Byte Website Question",
                           recipients=["neiliscool67@gmail.com", "aditagarwal76@gmail.com", "bytebybyte.npo@gmail.com",
                                       "aditneil@outlook.com"])

@@ -12,3 +12,7 @@ MAIL_PASSWORD = os.environ["MAIL_PASSWORD"]
 MAIL_DEFAULT_SENDER = "bytebybyte.npo@gmail.com"
 MAIL_MAX_EMAILS = None
 MAIL_ASCII_ATTACHMENTS = False
+
+spam_names = ["HenryPhiBe", "CrytoPhiBePhiBe"]
+spam_domains = [""]
+spam_emails = [""]
