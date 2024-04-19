@@ -5,7 +5,7 @@ from flask import redirect
 class EnrollRedirect(Resource):
     @classmethod
     def get(cls):
-        return redirect("https://forms.gle/tKFgZ95gWCQuGVj7A", code=302)
+        return redirect("https://forms.gle/uA5BvZyZHTp9JwxP7", code=302)
 
 
 class AlternateEnrollRedirect(Resource):

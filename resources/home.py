@@ -8,7 +8,6 @@ from extensions import mail, is_spam
 class HomePage(Resource):
     @classmethod
     def get(cls):
-        print(dict(request.headers))
         headers = {"Content-Type": "text/html"}
         return make_response(render_template("home_page.html"), 200, headers, )
 
