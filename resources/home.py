@@ -18,8 +18,7 @@ class HomePage(Resource):
         message = request.form.get('message')
         if not is_spam(name, email):
             msg = Message("Byte By Byte Website Question",
-                          recipients=["neiliscool67@gmail.com", "aditagarwal76@gmail.com", "help@byte-by-byte.org",
-                                      "aditneil@outlook.com"])
+                          recipients=["neil_agarwal@outlook.com", "aditagarwal76@gmail.com", "bytebybyte.npo@gmail.com"])
 
             msg.body = f"""
     Name: {name}
