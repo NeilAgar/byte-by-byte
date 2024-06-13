@@ -2,14 +2,14 @@ from flask_restful import Resource
 from flask import make_response, render_template, redirect
 
 
-class Announcements(Resource):
+class WeekSetup(Resource):
     @classmethod
     def get(cls):
         headers = {"Content-Type": "text/html"}
-        return make_response(render_template("announcements.html"), 200, headers)
+        return make_response(render_template("weeksetup.html"), 200, headers)
 
 
-class AnnouncementsRedirect(Resource):
+class WeekSetupRedirect(Resource):
     @classmethod
     def get(cls):
-        return redirect("/announcements", code=302)
+        return redirect("/week_setup", code=302)
